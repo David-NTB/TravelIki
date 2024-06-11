@@ -88,6 +88,8 @@ public class Dashboard_JFrm extends JFrame {
 		});
 	}
 
+	// iki tera
+	
 	/**
 	 * Create the frame.
 	 */

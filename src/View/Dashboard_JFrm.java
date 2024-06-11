@@ -94,6 +94,7 @@ public class Dashboard_JFrm extends JFrame {
 	 * Create the frame.
 	 */
 	public Dashboard_JFrm(String role) {
+
 		if (role.equals("Admin")) {
 			System.out.println("ok");
 			Login_Jfrm l = new Login_Jfrm();
@@ -111,7 +112,7 @@ public class Dashboard_JFrm extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 
-		// sebagai admin
+		// sebagai admin aksess all
 		if (role.equals("Admin")) {
 			mnHome = new JMenu("Home");
 			mnHome.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/home (2).png")));

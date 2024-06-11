@@ -56,3 +56,4 @@ public class LOG_Splash {
 }
 
 // polisi hitam mancung panjang berduri
+// yanto yanti

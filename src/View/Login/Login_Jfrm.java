@@ -19,7 +19,7 @@ public class Login_Jfrm extends JFrame {
     private JComboBox <String> rol;
     private JToggleButton tglbtnNewToggleButton;
 
-    // Dita Leni
+    // Dita leni
     /**
      * Create the application.
      */

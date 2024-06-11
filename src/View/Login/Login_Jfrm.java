@@ -19,6 +19,7 @@ public class Login_Jfrm extends JFrame {
     private JComboBox <String> rol;
     private JToggleButton tglbtnNewToggleButton;
 
+    // Dita leni
     /**
      * Create the application.
      */
@@ -127,7 +128,7 @@ public class Login_Jfrm extends JFrame {
         // Initialize and set up the JComboBox
         rol = new JComboBox<>();
         rol.setModel(
-                new DefaultComboBoxModel<>(new String[] { "Select", "Employee", "Manager", "Admin", "Super_Admin" }));
+        new DefaultComboBoxModel<>(new String[] { "Select", "Employee", "Manager", "Admin", "Super_Admin" }));
         rol.setBounds(140 + 447, 84, 250, 30); // Position below Password
         frmLoginPanel.getContentPane().add(rol); // Add to the content pane
 

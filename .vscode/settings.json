@@ -1,0 +1,21 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "src/syntheticaBlackEye.jar",
+        "src/synthetica.jar",
+        "src/syntheticaAluOxide.jar",
+        "src/rs2xml.jar",
+        "src/napkinlaf-alpha001.jar",
+        "src/mysql-connector-java-5.1.26_2.jar",
+        "src/log4j-1.2.15.jar",
+        "src/jide-synthetica.jar",
+        "src/JSplashScreen_my_use.jar",
+        "src/seaglasslookandfeel-0.1.6.1.jar",
+        "src/seaglass-demo.jar",
+        "src/View/All_panel/jcalendar-1.4.jar",
+        "jgoodies-forms-1.8.0-sources.jar",
+        "miglayout15-swing.jar",
+        "jgoodies-forms-1.8.0.jar",
+        "jgoodies-forms-1.8.0-source.jar"
+    ]
+}

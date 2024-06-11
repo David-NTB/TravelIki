@@ -7,6 +7,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JWindow;
 import java.awt.BorderLayout;
+import javax.swing.UIManager;
 
 public class LOG_Splash {
 	public static void main(String[] args) throws InterruptedException {

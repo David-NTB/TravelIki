@@ -54,3 +54,5 @@ public class LOG_Splash {
 		// splash.dispose();
 	}
 }
+
+//polisi

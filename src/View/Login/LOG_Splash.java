@@ -55,4 +55,4 @@ public class LOG_Splash {
 	}
 }
 
-//polisi
+// polisi hitam

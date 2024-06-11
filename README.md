@@ -1,8 +1,8 @@
-# Shop Management System
+# TravelIki
 
 ## Introduction
 
-The Shop Management System is a Java-based application utilizing Object-Oriented Programming (OOP) principles and the Model-View-Controller (MVC) design pattern. This application allows users to efficiently manage daily transactions in a shop setting.
+Travel iki merupakan sebuah platform untuk memudahkan orang-orang yang ingin traveling.
 
 ## Features
 

@@ -1,7 +1,7 @@
 package View.Login;
 
 import Controller.Login_cntrl;
-import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
+//import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +16,7 @@ public class Login_Jfrm extends JFrame {
     public static Login_Jfrm window;
     private JTextField user;
     private JTextField passw;
-    private JComboBox rol;
+    private JComboBox <String> rol;
     private JToggleButton tglbtnNewToggleButton;
 
     // Dita Leni
@@ -27,7 +27,7 @@ public class Login_Jfrm extends JFrame {
         initialize();
     }
 
-    /** 
+    /**
      * Launch the application.
      */
     public static void main(String[] args) {
@@ -35,7 +35,7 @@ public class Login_Jfrm extends JFrame {
             public void run() {
                 try {
                     // UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
-                    UIManager.setLookAndFeel(new SyntheticaAluOxideLookAndFeel());
+                    UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
                     // UIManager.setLookAndFeel(new SyntheticaAluOxideLookAndFeel());
                     window = new Login_Jfrm();
                     window.frmLoginPanel.setVisible(true);
@@ -54,7 +54,7 @@ public class Login_Jfrm extends JFrame {
         frmLoginPanel = new JFrame();
         frmLoginPanel.setSize(890, 600); // Set ukuran menjadi 889x602
         frmLoginPanel.setType(Type.POPUP);
-        frmLoginPanel.setTitle("Welcome, Traveliki🦇");
+        frmLoginPanel.setTitle("Welcome To, Traveliki🦇");
         frmLoginPanel.setBounds(480, 250, 890, 600); // Set ukuran menjadi 889x602
         frmLoginPanel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmLoginPanel.getContentPane().setLayout(null);

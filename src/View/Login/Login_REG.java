@@ -24,7 +24,7 @@ public class Login_REG {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					UIManager.setLookAndFeel(new SyntheticaAluOxideLookAndFeel());
+					UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
 					Login_REG window = new Login_REG();
 					window.frmLoginPanel.setVisible(true);
 				} catch (Exception e) {

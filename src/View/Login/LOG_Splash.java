@@ -50,6 +50,7 @@ public class LOG_Splash {
 			Thread.sleep(50); // Simulasi waktu loading
 		}
 
+		// affff
 		splash.setVisible(false);
 		// splash.dispose();
 	}

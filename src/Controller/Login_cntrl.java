@@ -26,7 +26,7 @@ public class Login_cntrl {
 				System.out.println("you are an employee");
 				Dashboard_JFrm Dashboard_JFrm = new Dashboard_JFrm(rol);
 				Dashboard_JFrm.setVisible(true);
-
+				
 				Login_Jfrm.frmLoginPanel.dispose();
 
 			}

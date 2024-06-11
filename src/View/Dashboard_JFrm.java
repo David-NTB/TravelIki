@@ -58,6 +58,7 @@ public class Dashboard_JFrm extends JFrame {
 	private JPanel contentPane;
 	private JDesktopPane desktopPane;
 	private JMenu mnHome;
+	private JMenu mnHomeEmp;
 	private JMenuItem mntmAddCatagory;
 	private JMenuItem mntmAddProduct;
 	private JMenuItem mntmAddUnit;
@@ -90,7 +91,7 @@ public class Dashboard_JFrm extends JFrame {
 		});
 	}
 
-	// iki tera
+	// iki tera bas
 
 	/**
 	 * Create the frame.
@@ -101,15 +102,24 @@ public class Dashboard_JFrm extends JFrame {
 			System.out.println("ok");
 			Login_Jfrm l = new Login_Jfrm();
 			l.window.dispose();
+		} else if (role.equals("Employee")) {
+			System.out.println("ok employee");
+			Login_Jfrm em = new Login_Jfrm();
+			em.window.dispose();
+		} else if (role.equals("Manager")) {
+			System.out.println("Ok manager");
+			Login_Jfrm Mngr = new Login_Jfrm();
+			Mngr.window.dispose();
 		}
 
 		System.out.println(role);
+
 		setModalExclusionType(ModalExclusionType.APPLICATION_EXCLUDE);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Dashboard_JFrm.class.getResource("/resource/sp (4).png")));
 		setBackground(new Color(0, 51, 153));
 		setTitle("WWW.Traveliki.com");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(350, 100, 850, 550);
+		setBounds(445, 100, 850, 550);
 
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -173,15 +183,9 @@ public class Dashboard_JFrm extends JFrame {
 			});
 			mnHome.add(mntmAddUnit);
 
-			
 		}
 
 		// ini untuk akses user dan employee teman : )
-
-		// keluar = new JMenu("Log-out");
-		// keluar.setIcon(new
-		// ImageIcon(Dashboard_JFrm.class.getResource("/resource/image-saya.png")));
-		// keluar.add(keluar);
 
 		mnBillingInfo = new JMenu("Billing Info");
 		mnBillingInfo.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/bill.png")));
@@ -237,7 +241,10 @@ public class Dashboard_JFrm extends JFrame {
 				}
 			});
 			mnBillingInfo.add(mntmP);
+
 		}
+
+		// ini tampilan yang ada di awal :)
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -248,7 +255,7 @@ public class Dashboard_JFrm extends JFrame {
 			{
 				try {
 					// URL
-					image = ImageIO.read(LOG_Splash.class.getResource("/resource/dash.jpg"));
+					image = ImageIO.read(LOG_Splash.class.getResource("/resource/LatarBelakang.png")); // ganti :)
 					// image = ImageIO.read(new
 					// URL("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/396567/1160/772/m1/fpnw/wm0/flat_vector_shop-01-.jpg?1426020217&s=3550b21a0ae6ce4120676f9069322f63"));
 				} catch (IOException e) {
@@ -264,24 +271,36 @@ public class Dashboard_JFrm extends JFrame {
 			}
 
 		};
+
 		desktopPane.setBackground(Color.GRAY);
 		contentPane.add(desktopPane, BorderLayout.CENTER);
 		desktopPane.setLayout(new MigLayout("", "[][]", "[][]"));
 
+		// Tambahkan panel untuk menampilkan deskripsi produk di tengah desktopPane
+		JPanel productDescriptionPanel = new JPanel();
+		productDescriptionPanel.setBackground(Color.WHITE); // Ubah warna latar belakang sesuai kebutuhan
+		productDescriptionPanel.setBounds(100, 100, 300, 200); // Atur ukuran dan posisi panel
+		desktopPane.add(productDescriptionPanel);
+
+		// Tambahkan label untuk menampilkan deskripsi produk
+		JLabel productDescriptionLabel = new JLabel("apalah tubes iki jancuk milik si Admin 👌");
+		productDescriptionPanel.add(productDescriptionLabel);
+
 		// Tambahkan menu keluar
-			JMenu keluar = new JMenu("Log-out");
-			keluar.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/home (3).png")));
-			menuBar.add(keluar);
+		JMenu keluar = new JMenu("Log-out");
+		keluar.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/home (3).png")));
+		menuBar.add(keluar);
 
-			JMenuItem keluarItem = new JMenuItem("Keluar");
-			keluarItem.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/home (3).png"))); 
-			keluarItem.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-					// Keluar dari aplikasi
-					System.exit(0);
-				}
-			});
-
-			keluar.add(keluarItem);
+		JMenuItem keluarItem = new JMenuItem("Keluar");
+		keluarItem.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/home (3).png")));
+		keluarItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				// Keluar dari aplikasi
+				Login_Jfrm keluarJendela = new Login_Jfrm();
+				keluarJendela.frmLoginPanel.setVisible(true);
+				dispose();
+			}
+		});
+		keluar.add(keluarItem);
 	}
 }

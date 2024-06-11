@@ -54,6 +54,7 @@ import javax.swing.JCheckBoxMenuItem;
 
 public class Dashboard_JFrm extends JFrame {
 
+	// ini penginisialisasikan apapun itu nantinya yang di buat :)
 	private JPanel contentPane;
 	private JDesktopPane desktopPane;
 	private JMenu mnHome;
@@ -68,6 +69,7 @@ public class Dashboard_JFrm extends JFrame {
 	private JMenu mnBackupRestore;
 	private JMenuItem mntmBackupData;
 	private JMenuItem mntmRestoreData;
+	private JMenu keluar;
 
 	/**
 	 * Launch the application.
@@ -89,7 +91,7 @@ public class Dashboard_JFrm extends JFrame {
 	}
 
 	// iki tera
-	
+
 	/**
 	 * Create the frame.
 	 */
@@ -170,12 +172,17 @@ public class Dashboard_JFrm extends JFrame {
 				}
 			});
 			mnHome.add(mntmAddUnit);
+
+			
 		}
 
+		// ini untuk akses user dan employee teman : )
 
+		// keluar = new JMenu("Log-out");
+		// keluar.setIcon(new
+		// ImageIcon(Dashboard_JFrm.class.getResource("/resource/image-saya.png")));
+		// keluar.add(keluar);
 
-
-		//ini untuk akses user dan employee teman : ) 
 		mnBillingInfo = new JMenu("Billing Info");
 		mnBillingInfo.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/bill.png")));
 		menuBar.add(mnBillingInfo);
@@ -183,6 +190,7 @@ public class Dashboard_JFrm extends JFrame {
 		mntmCreateCashMemo = new JMenuItem("Create Bill");
 		mntmCreateCashMemo.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/sp (11).png")));
 		mntmCreateCashMemo.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent arg0) {
 				JInternalFrame JIF = new JInternalFrame("All Units", false, true, false, true);
 				Create_Sale Create_Sale = new Create_Sale();
@@ -197,18 +205,9 @@ public class Dashboard_JFrm extends JFrame {
 		// cut
 		mnBillingInfo.add(mntmCreateCashMemo);
 
-		// Log-out
-		Logout = new JMenu("Log-out");
-		Logout.setLocation(new Point(43, 100));
-		Logout.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/sp (12).png")));
-		Logout.add(Logout);
-
-
 		mnExtra = new JMenu("Extra");
 		mnExtra.setLocation(new Point(43, 100));
 		menuBar.add(mnExtra);
-
-		
 
 		// cut
 		mnBackupRestore = new JMenu("Backup");
@@ -269,5 +268,20 @@ public class Dashboard_JFrm extends JFrame {
 		contentPane.add(desktopPane, BorderLayout.CENTER);
 		desktopPane.setLayout(new MigLayout("", "[][]", "[][]"));
 
+		// Tambahkan menu keluar
+			JMenu keluar = new JMenu("Log-out");
+			keluar.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/home (3).png")));
+			menuBar.add(keluar);
+
+			JMenuItem keluarItem = new JMenuItem("Keluar");
+			keluarItem.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/home (3).png"))); 
+			keluarItem.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					// Keluar dari aplikasi
+					System.exit(0);
+				}
+			});
+
+			keluar.add(keluarItem);
 	}
 }

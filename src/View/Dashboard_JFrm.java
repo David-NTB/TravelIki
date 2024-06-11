@@ -172,6 +172,10 @@ public class Dashboard_JFrm extends JFrame {
 			mnHome.add(mntmAddUnit);
 		}
 
+
+
+
+		//ini untuk akses user dan employee teman : ) 
 		mnBillingInfo = new JMenu("Billing Info");
 		mnBillingInfo.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/bill.png")));
 		menuBar.add(mnBillingInfo);

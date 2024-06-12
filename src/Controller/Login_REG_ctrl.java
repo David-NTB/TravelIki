@@ -1,6 +1,8 @@
 package Controller;
 
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 import Model.Login_Admin;
 import Model.Login_Employee;
@@ -34,5 +36,9 @@ public class Login_REG_ctrl {
 		}
 
 	}
+
+    public Login_REG_ctrl(JTextField user, String emailText, JTextField notelpon, JPasswordField passw, String role) {
+        //TODO Auto-generated constructor stub
+    }
 
 }

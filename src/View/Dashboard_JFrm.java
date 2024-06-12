@@ -54,9 +54,11 @@ import javax.swing.JCheckBoxMenuItem;
 
 public class Dashboard_JFrm extends JFrame {
 
+	// ini penginisialisasikan apapun itu nantinya yang di buat :)
 	private JPanel contentPane;
 	private JDesktopPane desktopPane;
 	private JMenu mnHome;
+	private JMenu mnHomeEmp;
 	private JMenuItem mntmAddCatagory;
 	private JMenuItem mntmAddProduct;
 	private JMenuItem mntmAddUnit;
@@ -68,6 +70,7 @@ public class Dashboard_JFrm extends JFrame {
 	private JMenu mnBackupRestore;
 	private JMenuItem mntmBackupData;
 	private JMenuItem mntmRestoreData;
+	private JMenu keluar;
 
 	/**
 	 * Launch the application.
@@ -88,8 +91,8 @@ public class Dashboard_JFrm extends JFrame {
 		});
 	}
 
-	// iki tera
-	
+	// iki tera bas
+
 	/**
 	 * Create the frame.
 	 */
@@ -99,15 +102,24 @@ public class Dashboard_JFrm extends JFrame {
 			System.out.println("ok");
 			Login_Jfrm l = new Login_Jfrm();
 			l.window.dispose();
+		} else if (role.equals("Employee")) {
+			System.out.println("ok employee");
+			Login_Jfrm em = new Login_Jfrm();
+			em.window.dispose();
+		} else if (role.equals("Manager")) {
+			System.out.println("Ok manager");
+			Login_Jfrm Mngr = new Login_Jfrm();
+			Mngr.window.dispose();
 		}
 
 		System.out.println(role);
+
 		setModalExclusionType(ModalExclusionType.APPLICATION_EXCLUDE);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Dashboard_JFrm.class.getResource("/resource/sp (4).png")));
 		setBackground(new Color(0, 51, 153));
 		setTitle("WWW.Traveliki.com");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(350, 100, 850, 550);
+		setBounds(445, 100, 850, 550);
 
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -144,6 +156,7 @@ public class Dashboard_JFrm extends JFrame {
 			mntmAddProduct.setMnemonic(KeyEvent.VK_D);
 			mntmAddProduct.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/sp (9).png")));
 			mntmAddProduct.addActionListener(new ActionListener() {
+
 				public void actionPerformed(ActionEvent e) {
 					JInternalFrame JIF = new JInternalFrame("Product Category", false, true, false, true);
 					Product_name Product_name = new Product_name();
@@ -154,6 +167,7 @@ public class Dashboard_JFrm extends JFrame {
 					JIF.setVisible(true);
 				}
 			});
+
 			mnHome.add(mntmAddProduct);
 
 			mntmAddUnit = new JMenuItem("Add Unit");
@@ -170,7 +184,10 @@ public class Dashboard_JFrm extends JFrame {
 				}
 			});
 			mnHome.add(mntmAddUnit);
+
 		}
+
+		// ini untuk akses user dan employee teman : )
 
 		mnBillingInfo = new JMenu("Billing Info");
 		mnBillingInfo.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/bill.png")));
@@ -179,6 +196,7 @@ public class Dashboard_JFrm extends JFrame {
 		mntmCreateCashMemo = new JMenuItem("Create Bill");
 		mntmCreateCashMemo.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/sp (11).png")));
 		mntmCreateCashMemo.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent arg0) {
 				JInternalFrame JIF = new JInternalFrame("All Units", false, true, false, true);
 				Create_Sale Create_Sale = new Create_Sale();
@@ -193,18 +211,9 @@ public class Dashboard_JFrm extends JFrame {
 		// cut
 		mnBillingInfo.add(mntmCreateCashMemo);
 
-		// Log-out
-		Logout = new JMenu("Log-out");
-		Logout.setLocation(new Point(43, 100));
-		Logout.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/sp (12).png")));
-		Logout.add(Logout);
-
-
 		mnExtra = new JMenu("Extra");
 		mnExtra.setLocation(new Point(43, 100));
 		menuBar.add(mnExtra);
-
-		
 
 		// cut
 		mnBackupRestore = new JMenu("Backup");
@@ -234,36 +243,65 @@ public class Dashboard_JFrm extends JFrame {
 				}
 			});
 			mnBillingInfo.add(mntmP);
+
 		}
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(new BorderLayout(0, 0));
 
-		desktopPane = new JDesktopPane() {
-			private Image image;
-			{
-				try {
-					// URL
-					image = ImageIO.read(LOG_Splash.class.getResource("/resource/dash.jpg"));
-					// image = ImageIO.read(new
-					// URL("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/396567/1160/772/m1/fpnw/wm0/flat_vector_shop-01-.jpg?1426020217&s=3550b21a0ae6ce4120676f9069322f63"));
-				} catch (IOException e) {
-					e.printStackTrace();
+			//ini tampilan yang ada di awal :)
+			contentPane = new JPanel();
+			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+			setContentPane(contentPane);
+			contentPane.setLayout(new BorderLayout(0, 0));
+
+			desktopPane = new JDesktopPane() {
+				private Image image;
+				{
+					try {
+						// URL
+						image = ImageIO.read(LOG_Splash.class.getResource("/resource/LatarBelakang.png")); // ganti :)
+	
+					} catch (IOException e) {
+						e.printStackTrace();	
+					}
 				}
+
+				@Override
+
+				protected void paintComponent(Graphics g) {
+					super.paintComponent(g);
+					g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+				}
+
+			};
+
+			desktopPane.setBackground(Color.GRAY);
+			contentPane.add(desktopPane, BorderLayout.CENTER);
+			desktopPane.setLayout(new MigLayout("", "[][]", "[][]"));
+
+		// Tambahkan panel untuk menampilkan deskripsi produk di tengah desktopPane
+		JPanel productDescriptionPanel = new JPanel();
+		productDescriptionPanel.setBackground(Color.WHITE); // Ubah warna latar belakang sesuai kebutuhan
+		productDescriptionPanel.setBounds(100, 100, 300, 200); // Atur ukuran dan posisi panel
+		desktopPane.add(productDescriptionPanel);
+
+		// Tambahkan label untuk menampilkan deskripsi produk
+		JLabel productDescriptionLabel = new JLabel("apalah tubes iki jancuk milik si Admin 👌");
+		productDescriptionPanel.add(productDescriptionLabel);
+
+		// Tambahkan menu keluar
+		JMenu keluar = new JMenu("Log-out");
+		keluar.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/home (3).png")));
+		menuBar.add(keluar);
+
+		JMenuItem keluarItem = new JMenuItem("Keluar");
+		keluarItem.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/home (3).png")));
+		keluarItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				// Keluar dari aplikasi
+				Login_Jfrm keluarJendela = new Login_Jfrm();
+				keluarJendela.frmLoginPanel.setVisible(true);
+				dispose();
 			}
-
-			@Override
-
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
-			}
-
-		};
-		desktopPane.setBackground(Color.GRAY);
-		contentPane.add(desktopPane, BorderLayout.CENTER);
-		desktopPane.setLayout(new MigLayout("", "[][]", "[][]"));
-
+		});
+		keluar.add(keluarItem);
 	}
 }

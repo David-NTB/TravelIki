@@ -156,6 +156,7 @@ public class Dashboard_JFrm extends JFrame {
 			mntmAddProduct.setMnemonic(KeyEvent.VK_D);
 			mntmAddProduct.setIcon(new ImageIcon(Dashboard_JFrm.class.getResource("/resource/sp (9).png")));
 			mntmAddProduct.addActionListener(new ActionListener() {
+
 				public void actionPerformed(ActionEvent e) {
 					JInternalFrame JIF = new JInternalFrame("Product Category", false, true, false, true);
 					Product_name Product_name = new Product_name();
@@ -166,6 +167,7 @@ public class Dashboard_JFrm extends JFrame {
 					JIF.setVisible(true);
 				}
 			});
+
 			mnHome.add(mntmAddProduct);
 
 			mntmAddUnit = new JMenuItem("Add Unit");
@@ -244,37 +246,36 @@ public class Dashboard_JFrm extends JFrame {
 
 		}
 
-		// ini tampilan yang ada di awal :)
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(new BorderLayout(0, 0));
+			//ini tampilan yang ada di awal :)
+			contentPane = new JPanel();
+			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+			setContentPane(contentPane);
+			contentPane.setLayout(new BorderLayout(0, 0));
 
-		desktopPane = new JDesktopPane() {
-			private Image image;
-			{
-				try {
-					// URL
-					image = ImageIO.read(LOG_Splash.class.getResource("/resource/LatarBelakang.png")); // ganti :)
-					// image = ImageIO.read(new
-					// URL("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/396567/1160/772/m1/fpnw/wm0/flat_vector_shop-01-.jpg?1426020217&s=3550b21a0ae6ce4120676f9069322f63"));
-				} catch (IOException e) {
-					e.printStackTrace();
+			desktopPane = new JDesktopPane() {
+				private Image image;
+				{
+					try {
+						// URL
+						image = ImageIO.read(LOG_Splash.class.getResource("/resource/LatarBelakang.png")); // ganti :)
+	
+					} catch (IOException e) {
+						e.printStackTrace();	
+					}
 				}
-			}
 
-			@Override
+				@Override
 
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
-			}
+				protected void paintComponent(Graphics g) {
+					super.paintComponent(g);
+					g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+				}
 
-		};
+			};
 
-		desktopPane.setBackground(Color.GRAY);
-		contentPane.add(desktopPane, BorderLayout.CENTER);
-		desktopPane.setLayout(new MigLayout("", "[][]", "[][]"));
+			desktopPane.setBackground(Color.GRAY);
+			contentPane.add(desktopPane, BorderLayout.CENTER);
+			desktopPane.setLayout(new MigLayout("", "[][]", "[][]"));
 
 		// Tambahkan panel untuk menampilkan deskripsi produk di tengah desktopPane
 		JPanel productDescriptionPanel = new JPanel();

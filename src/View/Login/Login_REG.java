@@ -65,7 +65,7 @@ public class Login_REG {
 			{
 				try {
 					// Load the background image
-					image = ImageIO.read(Login_Jfrm.class.getResource("/resource/RevDoneAcc1.png"));
+					image = ImageIO.read(Login_Jfrm.class.getResource("/resource/RevisiDoneRegis.png"));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -89,11 +89,11 @@ public class Login_REG {
 	private void addRegistrationComponents() {
 		JLabel lblUsername = new JLabel("Username : ");
 		lblUsername.setFont(new Font("Poppins", Font.BOLD, 16));
-		lblUsername.setBounds(440, 210, 120, 30);
+		lblUsername.setBounds(785, 18, 120, 30);
 		desktopPane.add(lblUsername);
 
 		user = new JTextField();
-		user.setBounds(560, 210, 250, 30);
+		user.setBounds(885, 18, 250, 30);
 		desktopPane.add(user);
 		user.setColumns(10);
 
@@ -126,32 +126,32 @@ public class Login_REG {
 
 		JLabel lblEmail = new JLabel("Email : ");
 		lblEmail.setFont(new Font("Poppins", Font.BOLD, 16));
-		lblEmail.setBounds(440, 250, 120, 30);
+		lblEmail.setBounds(785, 55, 120, 30);
 		desktopPane.add(lblEmail);
 
 		email = new JTextField();
 		email.setColumns(10);
-		email.setBounds(560, 250, 250, 30);
+		email.setBounds(885, 55, 250, 30);
 		desktopPane.add(email);
 
 		JLabel lblTelpon = new JLabel("No. Telepon : ");
 		lblTelpon.setFont(new Font("Poppins", Font.BOLD, 16));
-		lblTelpon.setBounds(440, 290, 120, 30);
+		lblTelpon.setBounds(785, 95, 120, 30);
 		desktopPane.add(lblTelpon);
 
 		notelpon = new JTextField();
 		notelpon.setColumns(10);
-		notelpon.setBounds(560, 290, 250, 30);
+		notelpon.setBounds(885, 95, 250, 30);
 		desktopPane.add(notelpon);
 
 		JLabel lblPassword = new JLabel("Password : ");
 		lblPassword.setFont(new Font("Poppins", Font.BOLD, 16));
-		lblPassword.setBounds(440, 330, 120, 30);
+		lblPassword.setBounds(785, 135, 120, 30);
 		desktopPane.add(lblPassword);
 
 		passw = new JPasswordField();
 		passw.setColumns(10);
-		passw.setBounds(560, 330, 250, 30);
+		passw.setBounds(885, 135, 250, 30);
 		desktopPane.add(passw);
 
 		btnRegister = new JButton("Register");
@@ -172,7 +172,7 @@ public class Login_REG {
 				}
 			}
 		});
-		btnRegister.setBounds(560, 410, 100, 30);
+		btnRegister.setBounds(885, 220, 100, 30);
 		desktopPane.add(btnRegister);
 
 		JButton btnReset = new JButton("Reset");
@@ -185,18 +185,18 @@ public class Login_REG {
 				rol.setSelectedIndex(0);
 			}
 		});
-		btnReset.setBounds(710, 410, 100, 30);
+		btnReset.setBounds(1035, 220, 100, 30);
 		desktopPane.add(btnReset);
 
 		rol = new JComboBox<>();
 		rol.setModel(
 				new DefaultComboBoxModel<>(new String[] { "Select", "Employee", "Manager", "Admin", "Super_Admin" }));
-		rol.setBounds(560, 370, 250, 30);
+		rol.setBounds(885, 175, 250, 30);
 		desktopPane.add(rol);
 
 		JLabel lblRole = new JLabel("Role : ");
 		lblRole.setFont(new Font("Poppins", Font.BOLD, 16));
-		lblRole.setBounds(440, 370, 120, 30);
+		lblRole.setBounds(785, 175, 120, 30);
 		desktopPane.add(lblRole);
 	}
 }

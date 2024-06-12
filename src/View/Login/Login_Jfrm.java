@@ -151,7 +151,7 @@ public class Login_Jfrm extends JFrame {
                 rol.setSelectedIndex(0); // Reset combo box to default
             }
         });
-        btnReset.setBounds(1040, 165, 100, 30); // Adjusted position and size
+        btnReset.setBounds(1040, 165, 100, 30); // Adjusted posi    tion and size
         desktopPane.add(btnReset);
 
         // Icon untuk field Username

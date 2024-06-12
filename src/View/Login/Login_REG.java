@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.border.*;
-import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
+// import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
 import Model.*;
 import Controller.*;
 
@@ -52,7 +52,9 @@ public class Login_REG {
 		frmLoginPanel.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frmLoginPanel.getContentPane().setLayout(null);
 
-		
+		// JLabel lblLogin = new JLabel("Account Registration Form");
+		// lblLogin.setBounds(137, 11, 157, 24);
+		// frmLoginPanel.getContentPane().add(lblLogin);
 
 		user = new JTextField();
 		user.addKeyListener(new KeyAdapter() {
@@ -153,32 +155,9 @@ public class Login_REG {
 		user_lbl = new JLabel("Username Already Exist !!!");
 		user_lbl.setForeground(new Color(255, 0, 0));
 		user_lbl.setVisible(false);
-		user_lbl.setBounds(140 + 445, 40, 200, 30); // Sesuaikan posisi dan ukuran
+		user_lbl.setBounds(124, 96, 207, 14);
 		frmLoginPanel.getContentPane().add(user_lbl);
 
-		user = new JTextField();
-		user.addKeyListener(new KeyAdapter() {
-			@Override
-			public void keyReleased(KeyEvent arg0) {
-				String usr = user.getText();
-				String ad = Login_Admin.username_exist_admin(usr);
-				String em = Login_Employee.username_exist_emp(usr);
-				String mng = Login_Manager.username_exist_mngr(usr);
-
-				if (ad == null && em == null && mng == null) {
-					user.setBorder(null);
-					user_lbl.setVisible(false);
-					btnLogin.setEnabled(true);
-				} else {
-					user.setBorder(new LineBorder(new Color(255, 0, 0)));
-					user_lbl.setVisible(true);
-					btnLogin.setEnabled(false);
-				}
-			}
-		});
-
-
-		//gambar latar belakang aplikasu?
 		JLabel lblImageBottom2 = new JLabel(new ImageIcon(Login_Jfrm.class.getResource("/resource/RevDone1.png")));
 		lblImageBottom2.setBounds(0, 0, 889, 602); // Atur ukuran dan posisi sesuai kebutuhan
 		frmLoginPanel.getContentPane().add(lblImageBottom2);

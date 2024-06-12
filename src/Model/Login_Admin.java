@@ -72,7 +72,6 @@ public class Login_Admin {
 		String comnd = "SELECT username FROM login_admin WHERE username=?";
 		
 		String user = null;
-
 		
 		try{
 			PreparedStatement ps=obj.prepareStatement(comnd);

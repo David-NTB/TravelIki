@@ -97,11 +97,11 @@ public class Login_REG {
 		desktopPane.add(user);
 		user.setColumns(10);
 
-		user_lbl = new JLabel("Username Already Exist !!!");
-		user_lbl.setForeground(new Color(255, 0, 0));
-		user_lbl.setFont(new Font("Poppins", Font.BOLD, 14));
+		user_lbl = new JLabel("Username Already Exist !!!"); 
+		user_lbl.setForeground(new Color(128, 0, 0));
+		user_lbl.setFont(new Font("Poppins", Font.PLAIN, 10));
 		user_lbl.setVisible(false);
-		user_lbl.setBounds(560, 240, 250, 30);
+		user_lbl.setBounds(886, 37, 250, 30); // ubah ini
 		desktopPane.add(user_lbl);
 
 		user.addKeyListener(new KeyAdapter() {

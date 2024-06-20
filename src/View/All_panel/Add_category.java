@@ -89,7 +89,7 @@ public class Add_category extends JPanel {
 				String get2ndColumeValue_st=table.getModel().getValueAt(row, 1).toString();
 				
 				Product_category Product_category=new Product_category();
-				int id=Product_category.get_cat_id(get1stColumeValue_name);
+				int id = Product_category.get_cat_id(get1stColumeValue_name);
 				
 				
 				

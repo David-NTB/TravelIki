@@ -79,7 +79,7 @@ public class Dashboard_JFrm extends JFrame {
 
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
+				try {	
 
 					UIManager.setLookAndFeel(new SyntheticaAluOxideLookAndFeel());
 					Dashboard_JFrm frame = new Dashboard_JFrm("Running Dash");
@@ -213,7 +213,7 @@ public class Dashboard_JFrm extends JFrame {
 
 		mnExtra = new JMenu("Extra");
 		mnExtra.setLocation(new Point(43, 100));
-		menuBar.add(mnExtra);
+		menuBar.add(mnExtra);	
 
 		// cut
 		mnBackupRestore = new JMenu("Backup");

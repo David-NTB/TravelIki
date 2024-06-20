@@ -172,6 +172,7 @@ public class Login_Jfrm extends JFrame {
                 }
             }
         });
+
         tglbtnNewToggleButton.setBounds(1140, 84, 34, 30);
         desktopPane.add(tglbtnNewToggleButton);
 
@@ -186,6 +187,7 @@ public class Login_Jfrm extends JFrame {
         lblRegisterHere.setForeground(new Color(0, 51, 153));
         lblRegisterHere.setFont(new Font("Tahoma", Font.BOLD, 14));
         lblRegisterHere.setBounds(1040, 195, 150, 20); // Adjusted position with increased x-value for spacing
+        
         lblRegisterHere.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent arg0) {

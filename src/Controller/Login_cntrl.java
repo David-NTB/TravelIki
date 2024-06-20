@@ -1,12 +1,11 @@
 package Controller;
 
-import javax.swing.JOptionPane;
-
 import Model.Login_Admin;
 import Model.Login_Employee;
 import Model.Login_Manager;
 import View.Dashboard_JFrm;
 import View.Login.Login_Jfrm;
+import javax.swing.JOptionPane;
 
 public class Login_cntrl {
 

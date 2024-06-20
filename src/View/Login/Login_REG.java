@@ -5,6 +5,10 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.imageio.ImageIO;
 import javax.swing.border.*;
+<<<<<<< HEAD
+// import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
+=======
+>>>>>>> ad2f5dc76de2d24b479d5446e720f04826bb273e
 import Model.*;
 import Controller.*;
 import java.io.IOException;
@@ -55,6 +59,11 @@ public class Login_REG {
 		frmLoginPanel.setBounds(480, 250, 890, 600);
 		frmLoginPanel.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
+<<<<<<< HEAD
+		// JLabel lblLogin = new JLabel("Account Registration Form");
+		// lblLogin.setBounds(137, 11, 157, 24);
+		// frmLoginPanel.getContentPane().add(lblLogin);
+=======
 		JPanel contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		frmLoginPanel.setContentPane(contentPane);
@@ -91,6 +100,7 @@ public class Login_REG {
 		lblUsername.setFont(new Font("Poppins", Font.BOLD, 16));
 		lblUsername.setBounds(785, 18, 120, 30);
 		desktopPane.add(lblUsername);
+>>>>>>> ad2f5dc76de2d24b479d5446e720f04826bb273e
 
 		user = new JTextField();
 		user.setBounds(885, 18, 250, 30);
@@ -195,8 +205,24 @@ public class Login_REG {
 		desktopPane.add(rol);
 
 		JLabel lblRole = new JLabel("Role : ");
+<<<<<<< HEAD
+		lblRole.setFont(new Font("Poppins", Font.BOLD, 16)); // Match the font
+		lblRole.setBounds(41 + 447, 84, 120, 30); // Position below Password
+		frmLoginPanel.getContentPane().add(lblRole); // Add to the content pane
+
+		user_lbl = new JLabel("Username Already Exist !!!");
+		user_lbl.setForeground(new Color(255, 0, 0));
+		user_lbl.setVisible(false);
+		user_lbl.setBounds(124, 96, 207, 14);
+		frmLoginPanel.getContentPane().add(user_lbl);
+
+		JLabel lblImageBottom2 = new JLabel(new ImageIcon(Login_Jfrm.class.getResource("/resource/RevDone1.png")));
+		lblImageBottom2.setBounds(0, 0, 889, 602); // Atur ukuran dan posisi sesuai kebutuhan
+		frmLoginPanel.getContentPane().add(lblImageBottom2);
+=======
 		lblRole.setFont(new Font("Poppins", Font.BOLD, 16));
 		lblRole.setBounds(785, 175, 120, 30);
 		desktopPane.add(lblRole);
+>>>>>>> ad2f5dc76de2d24b479d5446e720f04826bb273e
 	}
 }

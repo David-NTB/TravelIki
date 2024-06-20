@@ -81,7 +81,7 @@ public class Dashboard_JFrm extends JFrame {
 			public void run() {
 				try {	
 
-					UIManager.setLookAndFeel(new SyntheticaAluOxideLookAndFeel());
+					UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
 					Dashboard_JFrm frame = new Dashboard_JFrm("Running Dash");
 					frame.setVisible(true);
 				} catch (Exception e) {

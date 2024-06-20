@@ -116,10 +116,6 @@ public static ArrayList<String> return_product_cat_wise(int Category_id){
 	}
 
 
-
-
-
-
 public static int get_pd_id(String give_pd_name){
 	Connection obj=Database.getconnection();
 	
@@ -135,8 +131,6 @@ public static int get_pd_id(String give_pd_name){
 		while(rs.next()){
 			pd_id=rs.getInt("id");	
 		}
-		
-		
 	}
 	catch(Exception e){
 		
